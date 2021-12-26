@@ -1,0 +1,1 @@
+const BASEURL_ENDPOINT = "https://api.sampleapis.com/futurama/";
