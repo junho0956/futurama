@@ -1,12 +1,11 @@
 import { NextPage } from "next";
+import { Container } from "../components/Container";
+import { PATH_TYPE } from "../constant";
 
 const Character:NextPage = () => {
+  const path = "characters"
 
-  return(
-    <div>
-      <h1>character</h1>
-    </div>
-  )
+  return <Container path={path} componentType={PATH_TYPE.characters}/>
 }
 
 export default Character;

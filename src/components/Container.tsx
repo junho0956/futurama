@@ -1,7 +1,16 @@
-import { Error, Loading } from "../components";
+import { useEffect } from "react";
 import { PATH_TYPE } from "../constant";
 import { useSWRData } from "../hooks/useSWRData";
-import { Info } from "./";
+import { 
+  Info, 
+  Cast, 
+  Characters, 
+  Episodes, 
+  Error, 
+  Inventory, 
+  Loading, 
+  Questions
+} from "./";
 
 interface ContainerProps {
   path: string;
@@ -10,6 +19,10 @@ interface ContainerProps {
 
 export const Container = ({path, componentType}: ContainerProps) => {
   const {data, error} = useSWRData(path);
+  
+  useEffect(() => {
+    document.title = path;
+  }, [path])
 
   if(error) return <Error />;
   if(!data) return <Loading />;
@@ -19,7 +32,19 @@ export const Container = ({path, componentType}: ContainerProps) => {
       return <Info data={data} />
     }
     case PATH_TYPE.characters: {
-      
+      return <Characters data={data} />
+    }
+    case PATH_TYPE.cast: {
+      return <Cast data={data} />
+    }
+    case PATH_TYPE.episodes: {
+      return <Episodes data={data} />
+    }
+    case PATH_TYPE.inventory: {
+      return <Inventory data={data} />
+    }
+    case PATH_TYPE.questions: {
+      return <Questions data={data} />
     }
     default: {
       return <div>없는 페이지인데요?</div>;

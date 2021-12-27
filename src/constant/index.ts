@@ -16,7 +16,7 @@ export const ROUTES = [
     label: PATH_TYPE.info,
   },
   {
-    path: '/characters',
+    path: '/character',
     id: 1,
     label: PATH_TYPE.characters,
   },
