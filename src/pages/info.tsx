@@ -1,19 +1,16 @@
 import { NextPage } from "next";
-import { Error, Loading } from "../components";
-import { useSWRData } from "../hooks/useSWRData";
+import { useEffect } from "react";
+import { Container } from "../components/Container";
+import { PATH_TYPE } from "../constant";
 
-const Info:NextPage = () => {
-  const path = 'info';
-  const {data, error} = useSWRData(path);
+const InfoPage:NextPage = () => {
+  const path = "info"
 
-  if(error) return <Error />;
-  if(!data) return <Loading />;
+  useEffect(() => {
+    document.title = path;
+  }, [])
 
-  return(
-    <div>
-      <h1>info</h1>
-    </div>
-  )
+  return <Container path={path} componentType={PATH_TYPE.info}/>
 }
 
-export default Info;
+export default InfoPage;

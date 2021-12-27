@@ -1,3 +1,6 @@
+import Inventory from "../pages/inventory";
+import Question from "../pages/questions";
+
 interface InfoCreators {
   name: string;
   url: string;
@@ -63,4 +66,3 @@ export interface InventoryData {
   stock: number;
   title: string;
 }
-
