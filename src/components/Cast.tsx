@@ -11,7 +11,7 @@ export const Cast = ({data}: {data:CastData[]}) => {
             <InfoWrap>
               <p>Name: {name}</p>
               <p>Born: {born}</p>
-              <a href={bio.url}>Visit: {bio.url}</a>
+              <a href={bio.url}>More Info: {bio.url}</a>
               {died && (<p>Died: {died}</p>)}
             </InfoWrap>
           </Item>
@@ -28,6 +28,7 @@ const Container = styled.main`
 
 const Item = styled.article`
   display: flex;
+  padding: 1em;
 `
 
 const InfoWrap = styled.div`

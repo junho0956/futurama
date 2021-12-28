@@ -57,6 +57,7 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   box-sizing: border-box;
+  padding: 2em;
 
   @media (max-width: ${MEDIA_OPTIONS.mobile}) {
     flex-direction: column;
@@ -92,13 +93,10 @@ const InfoWrap = styled.div`
   position: relative;
   width: 50%;
   height: 100%;
+  padding: 20px;
   
-  & > dl {
-    & > dt {
-    }
-    & > dd {
-      margin: 0;
-    }
+  & > div {
+    margin: 10px 0;
   }
 
   @media (max-width: ${MEDIA_OPTIONS.mobile}) {
@@ -108,5 +106,6 @@ const InfoWrap = styled.div`
 `
 
 const Sayings = styled.div`
-  
+  border-left: 2px solid #555;
+  padding-left: 20px;
 `

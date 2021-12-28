@@ -1,11 +1,14 @@
 import styled from "@emotion/styled"
 import Link from "next/link"
+import { useEffect, useRef } from "react"
 import { ROUTES } from "../constant"
-
 
 export const Navigation = () => {
   return (
     <Container>
+      <header>
+        <Link href="/info">FUTURAMA</Link>
+      </header>
       <NavBar>
         {ROUTES.map(route => {
           return (
@@ -29,12 +32,21 @@ const Container = styled.div`
   background-color: #ebebeb;
   width: 100%;
   height: 60px;
+  line-height: 60px;
+  z-index: 9999;
+  & > header {
+    margin-left: 100px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
 `
 
 const NavBar = styled.ul`
   display: flex;
+  position: absolute;
   margin: 0;
-
+  top: 0;
+  right: 100px;
 `
 
 const NavMenu = styled.li`
@@ -47,5 +59,6 @@ const NavMenu = styled.li`
   &:hover {
     background-color: #777;
     color: #eee;
+    font-weight: bold;
   }
 `

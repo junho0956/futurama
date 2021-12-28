@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 export const Loading = () => {
   return (
     <Container>
-      로딩 중입니다 ...
+      FUTURAMA..
     </Container>
   )
 }
