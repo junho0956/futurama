@@ -19,10 +19,21 @@ export const Info = ({data}: {data:InfoData[]}) => {
           )
         })}
       </CreatorList>
-      <h2>Synopsis</h2>
-      <p>{data[0].synopsis}</p>
       <h2>yearsAired</h2>
       <p>{data[0].yearsAired}</p>
+      <h2>Synopsis</h2>
+      {
+        data[0].synopsis.split(".").map((sy:string, index) => {
+          return (
+            sy.length ? (
+            <p key={`synopsis-${index}`}>{sy}.</p>
+            ) :
+            (
+              ""
+            )
+          )
+        })
+      }
     </Container>
   )
 }
