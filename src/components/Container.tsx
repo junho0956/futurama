@@ -47,7 +47,7 @@ export const Container = ({path, componentType}: ContainerProps) => {
       return <Questions data={data} />
     }
     default: {
-      return <div>없는 페이지인데요?</div>;
+      return <div>No Page</div>;
     }
   }
 }

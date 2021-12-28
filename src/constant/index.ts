@@ -41,3 +41,8 @@ export const ROUTES = [
     label: PATH_TYPE.inventory,
   },
 ]
+
+export const MEDIA_OPTIONS = {
+  mobile: "480px",
+  tablet: "1024px",
+}

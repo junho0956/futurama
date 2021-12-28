@@ -5,7 +5,7 @@ import { PATH_TYPE } from "../constant";
 const Question:NextPage = () => {
   const path = "questions"
 
-  return <Container path={path} componentType={PATH_TYPE.episodes}/>
+  return <Container path={path} componentType={PATH_TYPE.questions}/>
 }
 
 export default Question;

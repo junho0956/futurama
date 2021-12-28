@@ -14,6 +14,7 @@ export interface InfoData {
 }
 
 export interface CharacterData {
+  age: string;
   name: {
     first: string;
     middle: string;
@@ -65,4 +66,5 @@ export interface InventoryData {
   slogan: string;
   stock: number;
   title: string;
+  id: number;
 }
